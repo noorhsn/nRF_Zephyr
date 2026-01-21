@@ -95,3 +95,13 @@ Tips:
 - If the LED is built in to your board hardware, the alias should be defined in
   your :ref:`BOARD.dts file <devicetree-in-out-files>`. Otherwise, you can
   define one in a :ref:`devicetree overlay <set-devicetree-overlays>`.
+
+Advanced behavior
+*****************
+
+This sample now supports an optional user button (devicetree alias ``sw0``). 
+Pressing the button toggles the blink period between 1000 ms and 200 ms.
+
+Files:
+- Main application: [src/main.c](src/main.c) (uses symbol [`led`](src/main.c))
+- Button driver: [src/button.c](src/button.c) / [src/button.h](src/button.h)
